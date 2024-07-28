@@ -10,6 +10,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MyRequestsComponent } from './my-requests/my-requests.component';
 import { MyServersComponent } from './my-servers/my-servers.component';
 import { NewRequestComponent } from './new-request/new-request.component';
+import { ServerDetailsComponent } from './server-details/server-details.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { NewRequestComponent } from './new-request/new-request.component';
     LoginComponent,
     MyRequestsComponent,
     MyServersComponent,
-    NewRequestComponent
+    NewRequestComponent,
+    ServerDetailsComponent
   ],
   imports: [
     BrowserModule,

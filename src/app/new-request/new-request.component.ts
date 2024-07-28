@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormBuilder, FormGroup, NgForm, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-new-request',
@@ -25,16 +25,12 @@ export class NewRequestComponent {
 
   onSubmit(form: NgForm) {
     if (form.valid) {
-      // Handle form submission here
       console.log('Form Value:', this.formData);
 
-      // Set the success message
       this.successMessage = 'Request submitted with success and is under review by our admins';
 
-      // Clear the form
       form.resetForm();
 
-      // Hide the success message after 3 seconds
       setTimeout(() => {
         this.successMessage = null;
       }, 3000);
