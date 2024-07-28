@@ -1,0 +1,142 @@
+.logo {
+  width:25px;
+  margin-bottom: 4px;
+  margin-right: 10px;
+  height: 25px;
+  background-color: #61D27E;
+}
+a {
+  text-decoration: none;
+  margin-right: 20px;
+}
+.header {
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+}
+
+.table-container {
+  width: 100%;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 12px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+.blue-row {
+  background-color: #313B44;
+}
+
+.red-row {
+  background-color: #212529;
+}
+
+.fa-arrow-up-right-from-square {
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.fa-trash-can {
+  cursor: pointer;
+}
+
+//-----------------------------------------------
+.custom-checkbox {
+  display: inline-block;
+  position: relative;
+  padding-left: 25px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  user-select: none;
+}
+
+.custom-checkbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: #ccc;
+  border-radius: 0px;
+}
+
+.custom-checkbox input:checked ~ .checkmark {
+  background-color: #FF6B00;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.custom-checkbox input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.custom-checkbox .checkmark:after {
+  left: 7px;
+  top: 3px;
+  width: 6px;
+  height: 12px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}
+//-------------------------------------------------------
+.top-table{
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+
+.button{
+  background-color: #313B44;
+  padding: 6px 14px;
+  border: 1px solid #555;
+
+}
+input[type="search"] {
+  background-color: #313B44;
+  color: #fff;
+  border: 1px solid #555;
+  padding: 8px 12px;
+  font-size: 14px;
+  width: 200px;
+}
+
+input[type="search"]::placeholder {
+  color: #c7c6c6;
+}
+
+
+/* Add this to your component's CSS file (e.g., table.component.css) */
+.circle-rejected {
+  color: #FF4D4D; /* Red */
+}
+
+.circle-approved {
+  color: #61D27E; /* Green */
+}
+
+.circle-pending {
+  color: #FF6B00; /* Yellow */
+}
+
