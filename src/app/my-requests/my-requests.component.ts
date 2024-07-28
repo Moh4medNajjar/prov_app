@@ -20,7 +20,7 @@ export class MyRequestsComponent {
     { name: 'Aessica Anderson', submissionDate: '2024-07-19', status: 'Pending' }
   ];
 
-  sortColumn: string = 'name'; 
+  sortColumn: string = 'name';
   sortDirection: boolean = true;
 
   sortTable(column: string) {
@@ -51,5 +51,14 @@ export class MyRequestsComponent {
       default:
         return '';
     }
+  }
+
+  filteredItems = [...this.items];
+  searchQuery: string = '';
+
+  onSearch() {
+    this.filteredItems = this.items.filter(item =>
+      item.name.toLowerCase().includes(this.searchQuery.toLowerCase())
+    );
   }
 }
