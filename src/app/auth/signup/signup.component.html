@@ -6,6 +6,7 @@
     </div>
     <p style="font-weight: 300;">Provision servers with ease..</p>
   </div>
+  <h2 style="color:white; font-size:20px; margin-bottom: 16px;">Create your account</h2>
 
   <div class="form-box">
     <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
@@ -78,11 +79,11 @@
         </div>
       </div>
 
-      <div class="row mb-3" style="height: 100px;">
+      <div class="row mb-3" style="min-height: 100px;">
         <div class="col-md-6">
           <div class="form-group">
             <label for="password">Password</label>
-            <input type="password" id="password" formControlName="password" class="form-control" placeholder="Enter password">
+            <input type="password" id="password" formControlName="password" class="form-control" placeholder="Create a strong password">
             @if (userForm.controls['password'].invalid && (userForm.controls['password'].dirty || userForm.controls['password'].touched)) {
               <small class="text-danger">At least 8 characters long, with uppercase,<br> lowercase, and numbers.</small>
             }
@@ -101,6 +102,7 @@
       </div>
 
       <button type="submit" class="btn btn-primary w-100" [disabled]="userForm.invalid">Create my account</button>
+      <p style="color:white; text-align: center;">Already have an account? <a style="text-decoration:none;" routerLink="/login">Login</a></p>
     </form>
   </div>
 </div>
