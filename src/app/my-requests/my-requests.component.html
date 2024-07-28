@@ -6,6 +6,7 @@
       <div class="logo"></div>
       <h3>Provision App</h3>
     </div>
+    <p style="font-size:large; font-weight: bold; margin: 0">Mohamed Najjar</p>
     <div class="menu">
       <a href="">My Requests</a>
       <a href="">My Servers</a>
@@ -33,12 +34,7 @@
     <table>
       <thead>
         <tr>
-          <th>
-            <label class="custom-checkbox">
-              <input type="checkbox">
-              <span class="checkmark"></span>
-            </label>
-          </th>
+          <th>#</th> <!-- Index Column -->
           <th (click)="sortTable('name')">
             Name
             <i class="fa fa-sort" *ngIf="sortColumn === 'name'"></i>
@@ -57,12 +53,7 @@
       <tbody>
         @for (item of filteredItems; track item) {
           <tr [ngClass]="{ 'blue-row': filteredItems.indexOf(item) % 2 === 0, 'red-row': filteredItems.indexOf(item) % 2 !== 0 }">
-            <td>
-              <label class="custom-checkbox">
-                <input type="checkbox">
-                <span class="checkmark"></span>
-              </label>
-            </td>
+            <td>{{ filteredItems.indexOf(item) + 1 }}</td> <!-- Index Display -->
             <td>{{ item.name }}</td>
             <td>{{ item.submissionDate }}</td>
             <td>
