@@ -140,3 +140,45 @@ input[type="search"]::placeholder {
   color: #FF6B00; /* Yellow */
 }
 
+//****************SCROLL BAR********************************************
+::-webkit-scrollbar {
+  width: 8px; /* Width of the scrollbar */
+  height: 8px; /* Height of the scrollbar for horizontal scrollbars */
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Background color of the scrollbar track */
+  // border-radius: 10px; /* Rounded corners for the track */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1C212C; /* Color of the scrollbar handle */
+  // border-radius: 10px; /* Rounded corners for the handle */
+  border: 2px solid #fff; /* Border around the handle */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #1C212C; /* Darker color when hovering over the handle */
+}
+
+/* For Firefox */
+.scrollbar-container {
+  scrollbar-width: thin; /* Thin scrollbar width */
+  scrollbar-color: #1C212C #f1f1f1; /* Scrollbar color and track color */
+}
+
+/* For Edge and Internet Explorer */
+.scrollbar-container {
+  -ms-overflow-style: scrollbar; /* Enable scrollbar styling */
+}
+
+/* Additional styles for smooth scrolling behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom styling for scrollable containers */
+.scrollable-content {
+  overflow-y: scroll; /* Enables vertical scrolling */
+  max-height: 400px; /* Adjust height as needed */
+}
