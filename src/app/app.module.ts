@@ -9,6 +9,7 @@ import { LoginComponent } from './auth/login/login.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MyRequestsComponent } from './my-requests/my-requests.component';
 import { MyServersComponent } from './my-servers/my-servers.component';
+import { NewRequestComponent } from './new-request/new-request.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { MyServersComponent } from './my-servers/my-servers.component';
     SignupComponent,
     LoginComponent,
     MyRequestsComponent,
-    MyServersComponent
+    MyServersComponent,
+    NewRequestComponent
   ],
   imports: [
     BrowserModule,
