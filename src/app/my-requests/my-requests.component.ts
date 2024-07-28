@@ -26,7 +26,7 @@ export class MyRequestsComponent {
   sortTable(column: string) {
     this.sortDirection = (this.sortColumn === column) ? !this.sortDirection : true;
     this.sortColumn = column;
-    this.items.sort((a, b) => {
+    this.filteredItems.sort((a, b) => {
       let comparison = 0;
       if (this.sortColumn === 'name') {
         comparison = a.name.localeCompare(b.name);
