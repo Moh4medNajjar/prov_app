@@ -15,6 +15,7 @@ import { RequestDetailsComponent } from './request-details/request-details.compo
 import { UsersListComponent } from './users-list/users-list.component';
 import { AdminsListComponent } from './admins-list/admins-list.component';
 import { AdminDetailsComponent } from './admin-details/admin-details.component';
+import { CreateUserComponent } from './create-user/create-user.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { AdminDetailsComponent } from './admin-details/admin-details.component';
     RequestDetailsComponent,
     UsersListComponent,
     AdminsListComponent,
-    AdminDetailsComponent
+    AdminDetailsComponent,
+    CreateUserComponent
   ],
   imports: [
     BrowserModule,
