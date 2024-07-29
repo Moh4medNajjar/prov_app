@@ -12,6 +12,7 @@ import { MyServersComponent } from './my-servers/my-servers.component';
 import { NewRequestComponent } from './new-request/new-request.component';
 import { ServerDetailsComponent } from './server-details/server-details.component';
 import { RequestDetailsComponent } from './request-details/request-details.component';
+import { UsersListComponent } from './users-list/users-list.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { RequestDetailsComponent } from './request-details/request-details.compo
     MyServersComponent,
     NewRequestComponent,
     ServerDetailsComponent,
-    RequestDetailsComponent
+    RequestDetailsComponent,
+    UsersListComponent
   ],
   imports: [
     BrowserModule,

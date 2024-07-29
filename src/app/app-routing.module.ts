@@ -1,3 +1,4 @@
+import { UsersListComponent } from './users-list/users-list.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './auth/login/login.component';
@@ -16,6 +17,7 @@ const routes: Routes = [
   { path: 'new-request', component: NewRequestComponent },
   { path: 'server-details', component: ServerDetailsComponent },
   { path: 'request-details', component: RequestDetailsComponent },
+  { path: 'users-list', component: UsersListComponent },
 
 ];
 
