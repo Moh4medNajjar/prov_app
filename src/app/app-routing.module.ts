@@ -9,6 +9,7 @@ import { MyServersComponent } from './my-servers/my-servers.component';
 import { NewRequestComponent } from './new-request/new-request.component';
 import { ServerDetailsComponent } from './server-details/server-details.component';
 import { RequestDetailsComponent } from './request-details/request-details.component';
+import { AdminDetailsComponent } from './admin-details/admin-details.component';
 
 const routes: Routes = [
   {path:"login", component: LoginComponent},
@@ -20,6 +21,7 @@ const routes: Routes = [
   { path: 'request-details', component: RequestDetailsComponent },
   { path: 'users-list', component: UsersListComponent },
   { path: 'admins-list', component: AdminsListComponent },
+  { path: 'user-details', component: AdminDetailsComponent },
 
 ];
 

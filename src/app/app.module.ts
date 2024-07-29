@@ -14,6 +14,7 @@ import { ServerDetailsComponent } from './server-details/server-details.componen
 import { RequestDetailsComponent } from './request-details/request-details.component';
 import { UsersListComponent } from './users-list/users-list.component';
 import { AdminsListComponent } from './admins-list/admins-list.component';
+import { AdminDetailsComponent } from './admin-details/admin-details.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { AdminsListComponent } from './admins-list/admins-list.component';
     ServerDetailsComponent,
     RequestDetailsComponent,
     UsersListComponent,
-    AdminsListComponent
+    AdminsListComponent,
+    AdminDetailsComponent
   ],
   imports: [
     BrowserModule,
