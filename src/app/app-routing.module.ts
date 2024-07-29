@@ -1,3 +1,4 @@
+import { AdminsListComponent } from './admins-list/admins-list.component';
 import { UsersListComponent } from './users-list/users-list.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
@@ -18,6 +19,7 @@ const routes: Routes = [
   { path: 'server-details', component: ServerDetailsComponent },
   { path: 'request-details', component: RequestDetailsComponent },
   { path: 'users-list', component: UsersListComponent },
+  { path: 'admins-list', component: AdminsListComponent },
 
 ];
 
