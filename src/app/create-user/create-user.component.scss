@@ -212,3 +212,10 @@ input, select {
 .button:hover {
   background-color: #4b55639e!important;
 }
+input::placeholder, select::placeholder, textarea::placeholder {
+  color: rgba(255, 255, 255, 0.521);
+}
+
+input::-ms-input-placeholder, select::-ms-input-placeholder, textarea::-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.555);
+}

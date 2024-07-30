@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { AuthService } from '../../services/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -10,12 +12,12 @@ export class LoginComponent implements OnInit {
   userForm!: FormGroup;
   departments: string[] = ['IT Support', 'Development', 'HR', 'Finance', 'Administration'];
 
-  constructor(private fb: FormBuilder) { }
+  constructor(private fb: FormBuilder, private authService: AuthService, private router: Router) { }
 
   ngOnInit(): void {
     this.userForm = this.fb.group({
-      email: ['', [Validators.required, Validators.email]],
-      password: ['', [Validators.required, Validators.minLength(8), Validators.pattern(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).+$/)]],
+      // email: ['', [Validators.required, Validators.email]],
+      password: ['', [Validators.required]],
       matricule: ['', [Validators.required, Validators.pattern(/^\d{6}$/)]],
     });
   }
@@ -23,8 +25,16 @@ export class LoginComponent implements OnInit {
 
   onSubmit() {
     if (this.userForm.valid) {
-      console.log('Form Submitted', this.userForm.value);
-      // Perform further actions here
+      const { matricule, password } = this.userForm.value;
+      this.authService.login(matricule, password).subscribe({
+        next: (response: any) => {
+          console.log('Login successful', response);
+          this.router.navigate(['/my-requests']);
+        },
+        error: (error: any) => {
+          console.error('Login failed', error);
+        }
+      });
     } else {
       console.log('Form is invalid');
     }

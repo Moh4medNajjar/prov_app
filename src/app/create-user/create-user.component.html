@@ -78,7 +78,7 @@
           <div class="form-group d-flex align-items-start">
             <label for="department" class="col-md-4">Department</label>
             <div class="col-md-8">
-              <select id="department" formControlName="department" class="form-control">
+              <select id="department" formControlName="department" class="form-control custom-select" >
                 <option value="" disabled>Select department</option>
                 <option *ngFor="let department of departments" [value]="department">{{ department }}</option>
               </select>
@@ -104,14 +104,14 @@
         </div>
       </div>
 
-      <div class="row mb-3" >
+      <div class="row mb-3">
         <div class="col-md-12">
           <div class="form-group d-flex align-items-start">
             <label for="password" class="col-md-4">Password</label>
             <div class="col-md-8">
               <input type="password" id="password" formControlName="password" class="form-control" placeholder="Create a strong password">
               @if (userForm.controls['password'].invalid && (userForm.controls['password'].dirty || userForm.controls['password'].touched)) {
-                <small class="text-danger">At least 8 characters long, with uppercase,<br> lowercase, and numbers.</small>
+                <small class="text-danger">At least 8 characters long, with uppercase, lowercase, and numbers.</small>
               }
             </div>
           </div>

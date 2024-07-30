@@ -16,6 +16,9 @@ import { UsersListComponent } from './users-list/users-list.component';
 import { AdminsListComponent } from './admins-list/admins-list.component';
 import { AdminDetailsComponent } from './admin-details/admin-details.component';
 import { CreateUserComponent } from './create-user/create-user.component';
+import { AuthService } from './services/auth.service';
+import { HttpClientModule } from '@angular/common/http'; // Import HttpClientModule
+
 
 @NgModule({
   declarations: [
@@ -36,9 +39,11 @@ import { CreateUserComponent } from './create-user/create-user.component';
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    RouterModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [AuthService, ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
